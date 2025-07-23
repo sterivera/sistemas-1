@@ -11,6 +11,7 @@ async function register(req,res){
         email:email.toLowerCase(),
         rol:"user",
         active:"false",
+        
     });
     const salt= bcrypt.genSaltSync(10);
     const hashpass= bcrypt.hashSync(password,salt);
